@@ -931,18 +931,18 @@
 <span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-1-10">10</a></span>
 <span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">NestFactory</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'@nestjs/core'</span><span class="p">;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">AppModule</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'./app.module'</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NestFactory</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'@nestjs/core'</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">AppModule</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./app.module'</span><span class="p">;</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">async</span> <span class="n">function</span> <span class="n">bootstrap</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>   <span class="o">//</span><span class="n">builds</span> <span class="n">the</span> <span class="n">application</span> <span class="kn">from</span><span class="w"> </span><span class="nn">its</span> <span class="n">root</span> <span class="n">module</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>  <span class="n">const</span> <span class="n">app</span> <span class="o">=</span> <span class="k">await</span> <span class="n">NestFactory</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">AppModule</span><span class="p">);</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>   <span class="o">//</span> <span class="n">starts</span> <span class="n">the</span> <span class="n">HTTP</span> <span class="n">server</span> <span class="n">on</span> <span class="n">port</span> <span class="mi">3000</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>  <span class="k">await</span> <span class="n">app</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">'Serveur démarré sur http://localhost:3000'</span><span class="p">);</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">bootstrap</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">   </span><span class="c1">//builds the application from its root module</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">NestFactory</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">AppModule</span><span class="p">);</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">   </span><span class="c1">// starts the HTTP server on port 3000</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Serveur démarré sur http://localhost:3000'</span><span class="p">);</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="p">}</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="n">bootstrap</span><span class="p">();</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="nx">bootstrap</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <p>Let’s comment on this code:</p>
 <ul>
@@ -960,13 +960,13 @@
 <span class="normal"><a href="#__codelineno-2-4">4</a></span>
 <span class="normal"><a href="#__codelineno-2-5">5</a></span>
 <span class="normal"><a href="#__codelineno-2-6">6</a></span>
-<span class="normal"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">Module</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'@nestjs/common'</span><span class="p">;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">AppController</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'./app.controller'</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Module</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'@nestjs/common'</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">AppController</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./app.controller'</span><span class="p">;</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="nd">@Module</span><span class="p">({</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>  <span class="n">controllers</span><span class="p">:</span> <span class="p">[</span><span class="n">AppController</span><span class="p">],</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kd">@Module</span><span class="p">({</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">  </span><span class="nx">controllers</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">AppController</span><span class="p">],</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">})</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">export</span> <span class="k">class</span><span class="w"> </span><span class="nc">AppModule</span> <span class="p">{}</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">AppModule</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Line 4: The <strong><em>[@Module]</em></strong> decorator turns the <strong><em>[AppModule]</em></strong> class into a <em>[NestJS]</em> <strong>module</strong>. A module groups together controllers and services that belong together. A small application has only one module; a large one has several (see Example 06);</li>
@@ -1053,14 +1053,14 @@
 <span class="normal"><a href="#__codelineno-8-5">5</a></span>
 <span class="normal"><a href="#__codelineno-8-6">6</a></span>
 <span class="normal"><a href="#__codelineno-8-7">7</a></span>
-<span class="normal"><a href="#__codelineno-8-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">Module</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'@nestjs/common'</span><span class="p">;</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">AppController</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'./app.controller'</span><span class="p">;</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">PremierController</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'./premier.controller'</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-8-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Module</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'@nestjs/common'</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">AppController</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./app.controller'</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">PremierController</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./premier.controller'</span><span class="p">;</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="nd">@Module</span><span class="p">({</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a>  <span class="n">controllers</span><span class="p">:</span> <span class="p">[</span><span class="n">AppController</span><span class="p">,</span> <span class="n">PremierController</span><span class="p">],</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="kd">@Module</span><span class="p">({</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">  </span><span class="nx">controllers</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">AppController</span><span class="p">,</span><span class="w"> </span><span class="nx">PremierController</span><span class="p">],</span>
 <a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="p">})</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="n">export</span> <span class="k">class</span><span class="w"> </span><span class="nc">AppModule</span> <span class="p">{}</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">AppModule</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div></td></tr></table></div>
 <p>Line 6: The module declares its <strong>two</strong> controllers.</p>
 <p>The file <strong><em>[src/app.controller.ts]</em></strong>:</p>
@@ -1959,16 +1959,16 @@
 <span class="normal"><a href="#__codelineno-66-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-66-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-66-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-66-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">Module</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'@nestjs/common'</span><span class="p">;</span>
-<a id="__codelineno-66-2" name="__codelineno-66-2"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">ProduitsController</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'./produits.controller'</span><span class="p">;</span>
-<a id="__codelineno-66-3" name="__codelineno-66-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">ProduitsService</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'./produits.service'</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-66-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Module</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'@nestjs/common'</span><span class="p">;</span>
+<a id="__codelineno-66-2" name="__codelineno-66-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ProduitsController</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./produits.controller'</span><span class="p">;</span>
+<a id="__codelineno-66-3" name="__codelineno-66-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ProduitsService</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./produits.service'</span><span class="p">;</span>
 <a id="__codelineno-66-4" name="__codelineno-66-4"></a>
-<a id="__codelineno-66-5" name="__codelineno-66-5"></a><span class="nd">@Module</span><span class="p">({</span>
-<a id="__codelineno-66-6" name="__codelineno-66-6"></a>  <span class="n">controllers</span><span class="p">:</span> <span class="p">[</span><span class="n">ProduitsController</span><span class="p">],</span>
-<a id="__codelineno-66-7" name="__codelineno-66-7"></a>  <span class="n">providers</span><span class="p">:</span> <span class="p">[</span><span class="n">ProduitsService</span><span class="p">],</span>
-<a id="__codelineno-66-8" name="__codelineno-66-8"></a>  <span class="n">exports</span><span class="p">:</span> <span class="p">[</span><span class="n">ProduitsService</span><span class="p">],</span>
+<a id="__codelineno-66-5" name="__codelineno-66-5"></a><span class="kd">@Module</span><span class="p">({</span>
+<a id="__codelineno-66-6" name="__codelineno-66-6"></a><span class="w">  </span><span class="nx">controllers</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">ProduitsController</span><span class="p">],</span>
+<a id="__codelineno-66-7" name="__codelineno-66-7"></a><span class="w">  </span><span class="nx">providers</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">ProduitsService</span><span class="p">],</span>
+<a id="__codelineno-66-8" name="__codelineno-66-8"></a><span class="w">  </span><span class="nx">exports</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">ProduitsService</span><span class="p">],</span>
 <a id="__codelineno-66-9" name="__codelineno-66-9"></a><span class="p">})</span>
-<a id="__codelineno-66-10" name="__codelineno-66-10"></a><span class="n">export</span> <span class="k">class</span><span class="w"> </span><span class="nc">ProduitsModule</span> <span class="p">{}</span>
+<a id="__codelineno-66-10" name="__codelineno-66-10"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">ProduitsModule</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>line 6: the module’s controller;</li>
@@ -1984,15 +1984,15 @@
 <span class="normal"><a href="#__codelineno-67-6">6</a></span>
 <span class="normal"><a href="#__codelineno-67-7">7</a></span>
 <span class="normal"><a href="#__codelineno-67-8">8</a></span>
-<span class="normal"><a href="#__codelineno-67-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">Module</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'@nestjs/common'</span><span class="p">;</span>
-<a id="__codelineno-67-2" name="__codelineno-67-2"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">ClientsController</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'./clients.controller'</span><span class="p">;</span>
-<a id="__codelineno-67-3" name="__codelineno-67-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">ProduitsModule</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'../produits/produits.module'</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-67-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Module</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'@nestjs/common'</span><span class="p">;</span>
+<a id="__codelineno-67-2" name="__codelineno-67-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ClientsController</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./clients.controller'</span><span class="p">;</span>
+<a id="__codelineno-67-3" name="__codelineno-67-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ProduitsModule</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'../produits/produits.module'</span><span class="p">;</span>
 <a id="__codelineno-67-4" name="__codelineno-67-4"></a>
-<a id="__codelineno-67-5" name="__codelineno-67-5"></a><span class="nd">@Module</span><span class="p">({</span>
-<a id="__codelineno-67-6" name="__codelineno-67-6"></a>  <span class="n">imports</span><span class="p">:</span> <span class="p">[</span><span class="n">ProduitsModule</span><span class="p">],</span>
-<a id="__codelineno-67-7" name="__codelineno-67-7"></a>  <span class="n">controllers</span><span class="p">:</span> <span class="p">[</span><span class="n">ClientsController</span><span class="p">],</span>
+<a id="__codelineno-67-5" name="__codelineno-67-5"></a><span class="kd">@Module</span><span class="p">({</span>
+<a id="__codelineno-67-6" name="__codelineno-67-6"></a><span class="w">  </span><span class="nx">imports</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">ProduitsModule</span><span class="p">],</span>
+<a id="__codelineno-67-7" name="__codelineno-67-7"></a><span class="w">  </span><span class="nx">controllers</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">ClientsController</span><span class="p">],</span>
 <a id="__codelineno-67-8" name="__codelineno-67-8"></a><span class="p">})</span>
-<a id="__codelineno-67-9" name="__codelineno-67-9"></a><span class="n">export</span> <span class="k">class</span><span class="w"> </span><span class="nc">ClientsModule</span> <span class="p">{}</span>
+<a id="__codelineno-67-9" name="__codelineno-67-9"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">ClientsModule</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div></td></tr></table></div>
 <p>Line 6: <strong><em>[ClientsModule]</em></strong> <strong>imports</strong> <strong><em>[ProduitsModule]</em></strong> and therefore has access to the services that the latter exports.</p>
 <p>The file <strong><em>[src/clients/clients.controller.ts]</em></strong>:</p>
@@ -2038,14 +2038,14 @@
 <span class="normal"><a href="#__codelineno-69-5">5</a></span>
 <span class="normal"><a href="#__codelineno-69-6">6</a></span>
 <span class="normal"><a href="#__codelineno-69-7">7</a></span>
-<span class="normal"><a href="#__codelineno-69-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">Module</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'@nestjs/common'</span><span class="p">;</span>
-<a id="__codelineno-69-2" name="__codelineno-69-2"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">ProduitsModule</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'./produits/produits.module'</span><span class="p">;</span>
-<a id="__codelineno-69-3" name="__codelineno-69-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">ClientsModule</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'./clients/clients.module'</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-69-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Module</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'@nestjs/common'</span><span class="p">;</span>
+<a id="__codelineno-69-2" name="__codelineno-69-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ProduitsModule</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./produits/produits.module'</span><span class="p">;</span>
+<a id="__codelineno-69-3" name="__codelineno-69-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ClientsModule</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'./clients/clients.module'</span><span class="p">;</span>
 <a id="__codelineno-69-4" name="__codelineno-69-4"></a>
-<a id="__codelineno-69-5" name="__codelineno-69-5"></a><span class="nd">@Module</span><span class="p">({</span>
-<a id="__codelineno-69-6" name="__codelineno-69-6"></a>  <span class="n">imports</span><span class="p">:</span> <span class="p">[</span><span class="n">ProduitsModule</span><span class="p">,</span> <span class="n">ClientsModule</span><span class="p">],</span>
+<a id="__codelineno-69-5" name="__codelineno-69-5"></a><span class="kd">@Module</span><span class="p">({</span>
+<a id="__codelineno-69-6" name="__codelineno-69-6"></a><span class="w">  </span><span class="nx">imports</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">ProduitsModule</span><span class="p">,</span><span class="w"> </span><span class="nx">ClientsModule</span><span class="p">],</span>
 <a id="__codelineno-69-7" name="__codelineno-69-7"></a><span class="p">})</span>
-<a id="__codelineno-69-8" name="__codelineno-69-8"></a><span class="n">export</span> <span class="k">class</span><span class="w"> </span><span class="nc">AppModule</span> <span class="p">{}</span>
+<a id="__codelineno-69-8" name="__codelineno-69-8"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">AppModule</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div></td></tr></table></div>
 <p>line 6: the root module no longer has a controller; it simply imports the application’s two modules.</p>
 <h3 id="266-execution">2.6.6. <span style="color: #1f4d78">Execution</span></h3>

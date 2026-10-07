@@ -809,14 +809,14 @@
 <span class="normal"><a href="#__codelineno-0-5">5</a></span>
 <span class="normal"><a href="#__codelineno-0-6">6</a></span>
 <span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">exemples</span><span class="o">/</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="err">├──</span><span class="w"> </span><span class="mo">01</span><span class="o">-</span><span class="n">structure</span><span class="o">/</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="err">├──</span><span class="w"> </span><span class="mo">02</span><span class="o">-</span><span class="n">routage</span><span class="o">/</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="err">├──</span><span class="w"> </span><span class="p">...</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="err">├──</span><span class="w"> </span><span class="mi">28</span><span class="o">-</span><span class="n">couches</span><span class="o">/</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="err">├──</span><span class="w"> </span><span class="n">node_modules</span><span class="o">/</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="err">├──</span><span class="w"> </span><span class="n">package</span><span class="p">.</span><span class="na">json</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="err">└──</span><span class="w"> </span><span class="n">package</span><span class="o">-</span><span class="n">lock</span><span class="p">.</span><span class="na">json</span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>exemples/
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>├── 01-structure/
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>├── 02-routage/
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>├── ...
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>├── 28-couches/
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>├── node_modules/
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>├── package.json
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>└── package-lock.json
 </code></pre></div></td></tr></table></div>
 <p>All examples share the same libraries, which are declared in <strong><em>[exemples/package.json]</em></strong>. They are installed <strong>once</strong>, in a console opened to the <strong><em>[exemples]</em></strong> folder. In VSCode, open the examples folder:</p>
 <p><img src="images/1000000000000234000003F1E0650DC6.png" width="282" height="505" style="width:7.461cm;height:13.349cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000234000003F1E0650DC6.png" /></p>
@@ -875,22 +875,22 @@
 <span class="normal"><a href="#__codelineno-5-13">13</a></span>
 <span class="normal"><a href="#__codelineno-5-14">14</a></span>
 <span class="normal"><a href="#__codelineno-5-15">15</a></span>
-<span class="normal"><a href="#__codelineno-5-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="err">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">  </span><span class="s2">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="err">{</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="s2">"module"</span><span class="p">:</span><span class="w"> </span><span class="s2">"commonjs"</span><span class="p">,</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="s2">"target"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ES2022"</span><span class="p">,</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="s2">"lib"</span><span class="p">:</span><span class="w"> </span><span class="err">["ES2022"],</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="s2">"outDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./dist"</span><span class="p">,</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="s2">"rootDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./src"</span><span class="p">,</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="s2">"sourceMap"</span><span class="p">:</span><span class="w"> </span><span class="no">true</span><span class="p">,</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="s2">"emitDecoratorMetadata"</span><span class="p">:</span><span class="w"> </span><span class="no">true</span><span class="p">,</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="s2">"experimentalDecorators"</span><span class="p">:</span><span class="w"> </span><span class="no">true</span><span class="p">,</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="s2">"allowSyntheticDefaultImports"</span><span class="p">:</span><span class="w"> </span><span class="no">true</span><span class="p">,</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="s2">"strictNullChecks"</span><span class="p">:</span><span class="w"> </span><span class="no">true</span><span class="p">,</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="s2">"skipLibCheck"</span><span class="p">:</span><span class="w"> </span><span class="no">true</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">  </span><span class="err">},</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">  </span><span class="s2">"include"</span><span class="p">:</span><span class="w"> </span><span class="err">["src"]</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="err">}</span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">  </span><span class="nt">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="nt">"module"</span><span class="p">:</span><span class="w"> </span><span class="s2">"commonjs"</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="nt">"target"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ES2022"</span><span class="p">,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="nt">"lib"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"ES2022"</span><span class="p">],</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="nt">"outDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./dist"</span><span class="p">,</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="nt">"rootDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./src"</span><span class="p">,</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="nt">"sourceMap"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="nt">"emitDecoratorMetadata"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">    </span><span class="nt">"experimentalDecorators"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="nt">"allowSyntheticDefaultImports"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="nt">"strictNullChecks"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="nt">"skipLibCheck"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">  </span><span class="nt">"include"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"src"</span><span class="p">]</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Let’s comment on this file:</p>
 <ul>
@@ -910,11 +910,11 @@
 <span class="normal"><a href="#__codelineno-6-6">6</a></span>
 <span class="normal"><a href="#__codelineno-6-7">7</a></span>
 <span class="normal"><a href="#__codelineno-6-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">  </span><span class="s2">"$schema"</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://json.schemastore.org/nest-cli"</span><span class="p">,</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">  </span><span class="s2">"collection"</span><span class="o">:</span><span class="w"> </span><span class="s2">"@nestjs/schematics"</span><span class="p">,</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">  </span><span class="s2">"sourceRoot"</span><span class="o">:</span><span class="w"> </span><span class="s2">"src"</span><span class="p">,</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">  </span><span class="s2">"compilerOptions"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="s2">"deleteOutDir"</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">  </span><span class="nt">"$schema"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://json.schemastore.org/nest-cli"</span><span class="p">,</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">  </span><span class="nt">"collection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@nestjs/schematics"</span><span class="p">,</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">  </span><span class="nt">"sourceRoot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"src"</span><span class="p">,</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">  </span><span class="nt">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="nt">"deleteOutDir"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
