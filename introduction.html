@@ -759,7 +759,7 @@
 
 <h1 id="1-introduction">1. <span style="color: #2e74b5">Introduction</span></h1>
 <p>The document’s PDF is |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQC7Ub14FWr-SLpLwUpKg6yxAeg6Gq-Ns5de-xZx_71N1g8?e=zj64hq">HERE</a>|.</p>
-<p>The document’s codes are |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQAErXqPJ8rcQ7PdNN3E3fx9AW0WkGpUAdiFE7-HnUPXdKE?e=BZHYTm">HERE</a>|.</p>
+<p>The document’s codes are |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQBz6CdbSoywSJ5hHjrI4wdZAdL77BilHT-oe8PNWtazpe0?e=9JRXWo">HERE</a>|.</p>
 <p>This document is a product of Anthropic’s IA Claude. Its purpose is to adapt the document <a href="https://stahe.github.io/aspnetmvc-nov-2013/"><u><span style="color: #0563c1">*Introduction to ASP.NET MVC by Example*</span></u></a> (2013) to the <em>[NestJS]</em> web framework:</p>
 <ul>
 <li>the <em>[ASP.NET MVC]</em> framework and the <em>[C#]</em> language are replaced by the <em>[NestJS]</em> framework and the <em>[TypeScript]</em> language;</li>
@@ -777,13 +777,13 @@
 </ul>
 <p>The web layer itself follows the <em>[MVC]</em> (<em>[Model – View – Controller]</em>) model:</p>
 <ul>
-<li>the <strong>controller</strong> (C) is a class whose methods—called <strong>actions</strong>—each handle a specific type of request (for example, <strong><em>[GET /agenda]</em></strong>). An action reads the request parameters, invokes the business layer, and then selects the view to display;</li>
+<li>the <strong>controller</strong> (C) is a class whose methods—called <strong>actions</strong>—each handle a specific type of request (for example, <strong><em>[GET /schedule]</em></strong>). An action reads the request parameters, invokes the business layer, and then selects the view to display;</li>
 <li>the <strong>model</strong> (M) is the set of data that the action passes to the view: a simple <em>[JavaScript]</em> object;</li>
 <li>the <strong>view</strong> (V) is a <em>[Handlebars]</em> file (extension <strong><em>[.hbs]</em></strong>): a HTML file in which <strong><em>[{{...}}]</em></strong> tags are replaced by data from the model.</li>
 </ul>
 <p>The processing of a request follows the numbered steps in the diagram:</p>
 <ul>
-<li>1: The browser sends a HTTP request, for example, <strong><em>[GET /agenda?idMedecin=1&amp;jour=2026-09-24]</em></strong>;</li>
+<li>1: The browser sends a HTTP request, for example, <strong><em>[GET /schedule?doctorId=1&amp;day=2026-09-24]</em></strong>;</li>
 <li>2: <em>[NestJS]</em>, which relies on the web server <em>[Express]</em>, selects the action responsible for handling this request: this is <strong>routing</strong>. Before reaching that point, the request may pass through <strong>middleware</strong>, <strong>guards</strong>, <strong>interceptors</strong>, and <strong>pipes</strong>, which we’ll explore in the following chapters;</li>
 <li>3: The action requests the data it needs from the business layer;</li>
 <li>4: It builds the view template and specifies the view that should display it;</li>
@@ -801,7 +801,7 @@
 </ul>
 <p>The library versions are those in the <strong><em>[package.json]</em></strong> file in the examples folder: <em>[NestJS]</em> 10, <em>[TypeScript]</em> 5, <em>[hbs]</em> 4 (<em>[Handlebars]</em>), <em>[class-validator]</em> 0.14, <em>[TypeORM]</em> 0.3, <em>[Bootstrap]</em> 5.</p>
 <h2 id="13-examples">1.3. <span style="color: #2e74b5">Examples</span></h2>
-<p>The examples are stored in a folder named <strong><em>[exemples]</em></strong>, with one subfolder per example:</p>
+<p>The examples are stored in a folder named <strong><em>[examples]</em></strong>, with one subfolder per example:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -809,16 +809,16 @@
 <span class="normal"><a href="#__codelineno-0-5">5</a></span>
 <span class="normal"><a href="#__codelineno-0-6">6</a></span>
 <span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>exemples/
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>examples/
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>├── 01-structure/
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>├── 02-routage/
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>├── 02-routing/
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>├── ...
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>├── 28-couches/
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>├── 28-layers/
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>├── node_modules/
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a>├── package.json
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a>└── package-lock.json
 </code></pre></div></td></tr></table></div>
-<p>All examples share the same libraries, which are declared in <strong><em>[exemples/package.json]</em></strong>. They are installed <strong>once</strong>, in a console opened to the <strong><em>[exemples]</em></strong> folder. In VSCode, open the examples folder:</p>
+<p>All examples share the same libraries, which are declared in <strong><em>[examples/package.json]</em></strong>. They are installed <strong>once</strong>, in a console opened to the <strong><em>[examples]</em></strong> folder. In VSCode, open the examples folder:</p>
 <p><img src="images/1000000000000234000003F1E0650DC6.png" width="282" height="505" style="width:7.461cm;height:13.349cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000234000003F1E0650DC6.png" /></p>
 <p>then, in a terminal integrated into VSCode, type the command</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npm install
@@ -833,14 +833,14 @@
 <span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>13-premiere-vue/
+<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>13-first-view/
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a>├── src/
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>│   ├── app.module.ts
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a>│   ├── main.ts
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>│   └── vues.controller.ts
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>│   └── views.controller.ts
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a>├── views/
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>│   ├── inconnu.hbs
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>│   └── index.hbs
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>│   ├── index.hbs
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>│   └── unknown.hbs
 <a id="__codelineno-2-9" name="__codelineno-2-9"></a>├── nest-cli.json
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a>└── tsconfig.json
 </code></pre></div></td></tr></table></div>
